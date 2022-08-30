@@ -1,0 +1,12 @@
+<div class="main-container">
+  <app-chat-component
+    [userId]="1"
+    [messages]="messages"
+    (messagesHandler)="displayMessages($event)"
+  ></app-chat-component>
+  <app-chat-component
+    [userId]="2"
+    [messages]="messages"
+    (messagesHandler)="displayMessages($event)"
+  ></app-chat-component>
+</div>
