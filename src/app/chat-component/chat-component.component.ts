@@ -14,20 +14,20 @@ export class ChatComponentComponent implements OnInit {
     this.messagesHandler = new EventEmitter();
     this.form = fb.group({
       message: [''],
-      slika: [''],
+      picture: [''],
     });
   }
   ngOnInit(): void {}
   sendMessage() {
-    const slika =
+    const picture =
       this.userId === 1
         ? `assets/images/man-portrait.jpg`
         : `assets/images/woman-portrait.jpg`;
-    this.form.controls['slika'].setValue(slika);
+    this.form.controls['picture'].setValue(picture);
     const message = {
       userId: this.userId,
       message: this.form.get('message')?.value,
-      slika: this.form.get('slika')?.value,
+      picture: this.form.get('picture')?.value,
     };
     this.messagesHandler.emit(message);
     this.form.reset();

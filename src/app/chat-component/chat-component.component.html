@@ -37,10 +37,10 @@
         >
           <p>{{ message.message }}</p>
           <div *ngIf="message.userId === 1" class="chat-msg">
-            <img src="{{ message.slika }}" />
+            <img src="{{ message.picture }}" />
           </div>
           <div *ngIf="message.userId !== 1" class="chat-msg">
-            <img src="{{ message.slika }}" />
+            <img src="{{ message.picture }}" />
           </div>
         </div>
       </div>
